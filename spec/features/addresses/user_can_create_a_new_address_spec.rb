@@ -12,7 +12,6 @@ describe 'User' do
 
     visit(student_path(student_1))
 
-    save_and_open_page
     fill_in('address[description]', with: description)
     fill_in('address[street]', with: street)
     fill_in('address[city]', with: city)
