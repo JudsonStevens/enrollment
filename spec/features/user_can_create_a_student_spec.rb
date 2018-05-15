@@ -6,6 +6,7 @@ describe 'User' do
 
     visit(new_student_path)
 
+    # Cannot get the :name for the fill in pointer to work. Have to use the bracket notation.
     fill_in('student[name]', with: student_name)
     click_on('Create Student')
 
