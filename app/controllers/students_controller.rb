@@ -1,6 +1,8 @@
 class StudentsController < ApplicationController
   def show
     @student = Student.find(params[:id])
+    @addresses = @student.addresses
+    @address = Address.new
   end
 
   def index

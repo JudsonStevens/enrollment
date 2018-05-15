@@ -10,7 +10,7 @@ describe 'User' do
 
     student_1 = Student.create(name: 'Scott')
 
-    visit(new_student_address_path(student_1))
+    visit(student_path(student_1))
 
     fill_in('address[description]', with: description)
     fill_in('address[street]', with: street)
