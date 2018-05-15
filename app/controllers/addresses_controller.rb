@@ -10,10 +10,11 @@ class AddressesController < ApplicationController
   def create
     student = Student.find(params[:student_id])
     student.addresses.create(address_params)
+    redirect_to student_path(student)
   end
 
   private
   def address_params
-    params.require(:address).permit(:description, :name, :city, :state, :zip_code)
+    params.require(:address).permit(:description, :street, :city, :state, :zip_code)
   end
 end

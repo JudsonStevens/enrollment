@@ -1,3 +1,12 @@
 <h1><%= @student.name %></h1>
 
+<h2>Addresses</h2>
+<% @addresses.each do |address| %>
+  <p><%= address.description %></p>
+  <p><%= address.street %></p>
+  <p><%= address.city %></p>
+  <p><%= address.state %></p>
+  <p><%= address.zip_code %></p>
+<% end %>
+
 <%= render partial: 'partials/new_address' %>
