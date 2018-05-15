@@ -1,5 +1,10 @@
 <h1>All Students</h1>
 
-<% @students.each do |student| %>
-  <%= student.name %>
-<% end %>
+<ul>
+  <% @students.each do |student| %>
+    <li>
+      <%= student.name %>
+      <%= link_to 'Delete', student_path(student), method: :delete %>
+    </li>
+  <% end %>
+</ul>
