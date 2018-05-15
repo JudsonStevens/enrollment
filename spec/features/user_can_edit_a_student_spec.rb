@@ -6,10 +6,12 @@ describe 'User' do
 
     visit(edit_student_path(student_1))
 
-    fill_in('student[name]', with: 'Rogue')
-    click_on('Edit Student')
+    new_name = 'Rogue'
+
+    fill_in('student[name]', with: new_name)
+    click_on('Update Student')
 
     expect(current_path).to eq(student_path(student_1))
-    expect(page).to have_content(student_1.name)
+    expect(page).to have_content(new_name)
   end
 end
